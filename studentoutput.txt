@@ -1,0 +1,99 @@
+/tmp/iMb2IQ42HZ.o
+...........********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 1
+Enter how many students you want to add : 4
+1 Student name to be added to register : Alekhya
+2 Student name to be added to register : Honey
+3 Student name to be added to register : Pinky
+4 Student name to be added to register : Mango
+...........********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 2
+Enter Y for present and N for absent
+1. Alekhya is present: Y
+2. Honey is present: N
+3. Pinky is present: Y
+4. Mango is present: N
+...........********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 1
+Enter how many students you want to add : 2
+5 Student name to be added to register : Apple
+6 Student name to be added to register : Orange
+...........********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 2
+Enter Y for present and N for absent
+1. Alekhya is present: Y
+2. Honey is present: N
+3. Pinky is present: k
+Y
+4. Mango is present: Y
+5. Apple is present: N
+6. Orange is present: Y
+...........********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 3
+Total Present    |   Total Absent    
+Alekhya        2               0
+Honey        0               2
+Pinky        2               0
+Mango        1               1
+Apple        0               1
+Orange        1               0
+...........********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 4
+Enter the name that to be removed : Alekhya
+Student is removed................********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 4
+Enter the name that to be removed : Apple
+Student is removed................********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 3
+Total Present    |   Total Absent    
+Honey        0               2
+Pinky        0               2
+Mango        2               0
+Orange        0               1
+...........********Main Menu*********...........
+1.Add Student
+2.Take Attendance
+3.Check Attendance
+4.Remove Student
+5.Exit
+Select a option : 5
