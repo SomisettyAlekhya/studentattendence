@@ -1,0 +1,114 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+char studentname[20][30];
+int presentattendence[20]={0};
+int absentattendence[20]={0};
+int indexnumber=0;
+void addstudent(){
+	int i,num,add;
+	if(indexnumber==0){
+		printf("Enter how many students you want to add : ");
+		scanf("%d",&num);
+		for(int i=0;i<num;i++){
+			printf("\n%d Student name to be added to register : ",i+1);
+			scanf("%s",&studentname[i]);
+			indexnumber++;
+		}
+	}
+	else{
+			printf("Enter how many students you want to add : ");
+		scanf("%d",&num);
+		add=indexnumber+num;
+		for(int i=indexnumber;i<add;i++){
+			printf("\n%d Student name to be added to register : ",i+1);
+				scanf("%s",&studentname[i]);
+			indexnumber++;
+		}
+	}
+}
+void takeattendence()
+{
+int i; char ch;
+printf("\nEnter Y for present and N for absent\n");
+    for ( i = 0; i < indexnumber; i++)
+    {
+        
+        printf("%d. %s is present: ",i+1,studentname[i]);
+        repeate:
+        scanf("%c",&ch);
+        if (ch=='Y'||ch=='y')
+            {
+                presentattendence[i]+=1;
+            }
+        else if (ch=='N'||ch=='n')
+            {
+                absentattendence[i]+=1;
+            }
+        else
+            {
+                   goto repeate;
+            }
+    }
+}
+
+void checkattendence(){
+	int i;
+	printf("\n Total Present    |   Total Absent    \n");
+	for(int i=0;i<indexnumber;i++){
+		printf("%s",studentname[i]);
+		printf("        %d               %d\n",presentattendence[i],absentattendence[i]);
+	}
+}
+void removestudent(){
+	char name[20];
+	printf("Enter the name that to be removed : ");
+	scanf("%s",&name);
+	for(int i=0;i<indexnumber;i++){
+		if(strcmp(name,studentname[i])==0){
+			for(int j=i;j<indexnumber;j++){
+				strcpy(studentname[j],studentname[j+1]);
+				presentattendence[i]=presentattendence[i+1];
+				absentattendence[i]=absentattendence[i+1];
+				
+			}
+			indexnumber--;
+			printf("\n Student is removed.....");
+			break;
+		}
+		else if(i==indexnumber-1){
+			printf("\n The name doesnot exists.........");
+		}
+	}
+}
+void main(){
+	int cho;
+	do{
+		printf("...........********Main Menu*********...........\n");
+		printf("1.Add Student\n");
+		printf("2.Take Attendance\n");
+		printf("3.Check Attendance\n");
+		printf("4.Remove Student\n");
+		printf("5.Exit\n");
+		printf("Select a option : ");
+		scanf("%d",&cho);
+		switch(cho){
+			case 1:
+				addstudent();
+				break;
+			case 2:
+				takeattendence();
+				break;
+			case 3:
+				checkattendence();
+				break;
+			case 4:
+				removestudent();
+				break;
+			case 5:
+				exit(0);
+				break;
+			
+		}
+	}while(cho!=5);
+}
